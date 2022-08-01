@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Tip calculator app</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script src="assets/components/main.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <img src="images/logo.svg" alt="logo" />
+      </div>
+
+      <div class="card">
+        <div class="input">
+          <div class="billContainer">
+            <div class="labelWrapper">
+              <label for="inpBill">Bill</label>
+            </div>
+
+            <div class="inpWrapper">
+              <input
+                class="inpText"
+                type="text"
+                name="inpBill"
+                id="inpBill"
+                placeholder="0.0"
+              />
+              <img src="images/icon-dollar.svg" alt="dollar-icon" />
+            </div>
+          </div>
+
+          <div class="tipContainer">
+            <div class="labelWrapper">
+              <label for="inpTip">Select Tip %</label>
+            </div>
+            <div class="btnWrapper">
+              <div class="btn">5%</div>
+              <div class="btn">10%</div>
+              <div class="btn btnActive">15%</div>
+              <div class="btn">25%</div>
+              <div class="btn">50%</div>
+              <input
+                class="inpText"
+                type="text"
+                name="inpTip"
+                id="inpTip"
+                placeholder="Custom"
+              />
+            </div>
+          </div>
+
+          <div class="peopleContainer">
+            <div class="labelWrapper">
+              <label for="inpPeople">Number of People</label>
+              <div class="errorMSG">Can't be zero</div>
+            </div>
+
+            <div class="inpWrapper">
+              <input
+                class="inpText"
+                type="text"
+                name="inpPeople"
+                id="inpPeople"
+                placeholder="15"
+              />
+              <img src="images/icon-person.svg" alt="person-icon" />
+            </div>
+          </div>
+        </div>
+
+        <div class="output">
+          <div class="lineWrapper">
+            <div class="lineOutput">
+              <div class="titleWrapper">
+                <div class="title">Tip Amount</div>
+                <div class="desc">/ person</div>
+              </div>
+              <div class="value">$4.27</div>
+            </div>
+
+            <div class="lineOutput">
+              <div class="titleWrapper">
+                <div class="title">Total</div>
+                <div class="desc">/ person</div>
+              </div>
+              <div class="value">$32.79</div>
+            </div>
+          </div>
+          <div class="btnOutput">Reset</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,162 @@
+.container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.logo {
+    margin: 5rem 0 3.5rem 0;
+}
+
+.card {
+    background-color: var(--white);
+    width: 100%;
+    border-top-left-radius: 2.5rem;
+    border-top-right-radius: 2.5rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    padding: 2.5rem;
+}
+
+.input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.labelWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.labelWrapper label {
+    color: var(--dark-grayish-cyan);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.errorMSG {
+    color: indianred;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.inpText {
+    background-color: var(--very-light-grayish-cyan);
+    border: none;
+    width: 100%;
+    border-radius: 0.5rem;
+    color: var(--very-dark-cyan);
+    font-family: 'Space Mono', monospace;
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-align: right;
+    padding: 0.5rem 2.4rem;
+}
+
+.inpText:focus {
+    outline: none;
+    border: 2px solid var(--strong-cyan);
+}
+
+.inpWrapper {
+    position: relative;
+}
+
+.inpWrapper img {
+    position: absolute;
+    left: 2.4rem;
+    top: 1.5rem;
+}
+
+.btnWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-top: 1.2rem;
+}
+
+.btn {
+    width: 46%;
+    text-align: center;
+    background-color: var(--very-dark-cyan);
+    color: var(--very-light-grayish-cyan);
+    font-size: 2.41rem;
+    font-weight: 700;
+    border-radius: .5rem;
+    padding: .6rem 0;
+    transition: all 0.5s ease;
+}
+
+.btn:hover {
+    background-color: var(--btn-hover);
+}
+
+.btnActive {
+    background-color: var(--strong-cyan);
+    color: var(--very-dark-cyan);
+}
+
+.btnWrapper input {
+    width: 46%;
+}
+
+.output {
+    background-color: var(--very-dark-cyan);
+    width: 100%;
+    border-radius: 1.5rem;
+    padding: 2.2rem;
+}
+
+.lineOutput {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1.4rem 0 2.4rem 0;
+}
+
+.title {
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+.desc {
+    color: var(--grayish-cyan);
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.value {
+    color: var(--strong-cyan);
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.btnOutput {
+    width: 100%;
+    background-color: var(--strong-cyan);
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--very-dark-cyan);
+    font-size: 2rem;
+    font-weight: 700;
+    border-radius: 0.5rem;
+    padding: 1rem 0;
+    margin-top: 3.4rem;
+    transition: all 0.5s ease;
+}
+
+.btnOutput:hover {
+    background-color: var(--btn-hover);
+}
