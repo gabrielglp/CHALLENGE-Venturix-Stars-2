@@ -1,3 +1,16 @@
+@keyframes animacao {
+
+    from {
+        background-color: #000;
+    }
+
+    to {
+        background-color: var(--light-grayish-cyan);
+    }
+
+
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -11,4 +24,6 @@ html {
 body {
     font-family: 'Space Mono', monospace;
     background-color: var(--light-grayish-cyan);
+    animation-name: animacao;
+    animation-duration: 6s;
 }
