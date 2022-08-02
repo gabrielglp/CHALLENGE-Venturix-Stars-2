@@ -17,7 +17,8 @@ resetBtn.addEventListener('click', reset)
 
 let billValue = 0.0 // valor padrão
 let tipValue = 0.15 // valor padrão -> 15% botão esta ativo
-let peopleValue = 0 // valor padrão
+let peopleValue = 1 // valor padrão
+let btnTip = true
 
 function validateFloat(s) {
   let rgx = /^[0-9]*\.?[0-9]*$/
@@ -51,11 +52,11 @@ function handleClick(e) {
   // passando um loop para percorrer o array de btns
   tipBtns.forEach((btn) => {
     // desativando o actice do btn em especifico
-    btn.classList.remove('btnActive')
+    btn.classList.remove('show-active')
 
     // e ativando o active no btn desejado
     if (e.target.innerHTML == btn.innerHTML) {
-      btn.classList.add('btnActive')
+      btn.classList.add('show-active')
       // passando o valor da porcentagem de cada botão clicado
       tipValue = parseFloat(btn.innerHTML) / 100
     }
@@ -100,7 +101,7 @@ function setPeopleValue() {
   // apenas number inteiro
   peopleValue = parseFloat(people.value)
 
-  // se as pessoas forem igual a zero aparece a mensagem de erro caso contrario ela some
+  // se as pessoas forem igual a zero, aparece a mensagem de erro caso contrario ela some
   if (peopleValue == 0) {
     errorMsg.classList.add('show-error-msg')
   } else {
@@ -123,12 +124,12 @@ function calculateTip() {
 
 // função de reset tendo ela como um recomeço de um conta nova.
 function reset() {
-  bill.value = ''
+  bill.value = '0.0'
   setBillValue()
 
   tipBtns[2].click()
 
-  people.value = '0'
+  people.value = '1'
   setPeopleValue()
 }
 
