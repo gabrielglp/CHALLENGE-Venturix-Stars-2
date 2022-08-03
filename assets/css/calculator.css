@@ -1,15 +1,19 @@
-.container {
+.logo {
+    margin: 5rem 0 3.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    animation: backInDown;
+    animation-duration: 3.2s;
+}
+
+main {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-}
-
-.logo {
-    margin: 5rem 0 3.5rem 0;
-    animation: backInDown;
-    animation-duration: 3.2s;
 }
 
 .card {
