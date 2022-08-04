@@ -57,7 +57,7 @@
                 <label for="inpTip">Select Tip %</label>
               </div>
               <div class="btnWrapper">
-                <div class="btn">5%</div>
+                <div class="btn show-active" id="btnDefault">5%</div>
                 <div class="btn">10%</div>
                 <div class="btn">15%</div>
                 <div class="btn">25%</div>
@@ -75,12 +75,12 @@
             <div class="peopleContainer">
               <div class="labelWrapper">
                 <label for="inpPeople">Number of People</label>
-                <div class="errorMSG">Can't be zero</div>
+                <div class="errorMSG show-error-msg">Can't be zero</div>
               </div>
 
               <div class="inpWrapper">
                 <input
-                  class="inpText"
+                  class="inpText input-show-error-msg"
                   type="text"
                   name="inpPeople"
                   id="inpPeople"

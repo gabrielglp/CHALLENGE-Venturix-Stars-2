@@ -60,6 +60,10 @@ main {
     opacity: 1;
 }
 
+.input-show-error-msg {
+    border-color: indianred !important;
+}
+
 .inpText {
     background-color: var(--very-light-grayish-cyan);
     border: none;

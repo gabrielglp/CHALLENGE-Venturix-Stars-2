@@ -1,5 +1,6 @@
 const bill = document.getElementById('inpBill')
 const tipBtns = document.querySelectorAll('.btn')
+const btnDefault = document.getElementById('btnDefault')
 const tipCustom = document.getElementById('inpTip')
 const people = document.getElementById('inpPeople')
 const errorMsg = document.querySelector('.errorMSG')
@@ -16,8 +17,8 @@ people.addEventListener('input', setPeopleValue)
 resetBtn.addEventListener('click', reset)
 
 let billValue = 0.0 // valor padrão
-let tipValue = 0.15 // valor padrão -> 15% botão esta ativo
-let peopleValue = 1 // valor padrão
+let tipValue = 0.05 // valor padrão -> 15% botão esta ativo
+let peopleValue = 0 // valor padrão
 
 function validateFloat(s) {
   let rgx = /^[0-9]*\.?[0-9]*$/
@@ -101,10 +102,13 @@ function setPeopleValue() {
   peopleValue = parseFloat(people.value)
 
   // se as pessoas forem igual a zero, aparece a mensagem de erro caso contrario ela some
-  if (peopleValue == 0) {
+  console.log('asdas' + peopleValue)
+  if (peopleValue == 0 || isNaN(peopleValue)) {
     errorMsg.classList.add('show-error-msg')
+    people.classList.add('input-show-error-msg')
   } else {
     errorMsg.classList.remove('show-error-msg')
+    people.classList.remove('input-show-error-msg')
   }
 
   calculateTip()
@@ -131,7 +135,8 @@ function reset() {
   bill.value = ''
   setBillValue()
 
-  tipBtns[2].click()
+  //tipBtns[2].click()
+  btnDefault.click()
 
   people.value = ''
   setPeopleValue()
