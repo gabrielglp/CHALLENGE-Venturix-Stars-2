@@ -18,7 +18,6 @@ resetBtn.addEventListener('click', reset)
 let billValue = 0.0 // valor padrão
 let tipValue = 0.15 // valor padrão -> 15% botão esta ativo
 let peopleValue = 1 // valor padrão
-let btnTip = true
 
 function validateFloat(s) {
   let rgx = /^[0-9]*\.?[0-9]*$/
@@ -80,10 +79,10 @@ function setTipCustomValue() {
   // apenas números inteiros permitidos
   tipValue = parseFloat(tipCustom.value / 100)
 
-  // remover o estado ativo dos botões
-  /*tipBtns.forEach((btn) => {
+  // remover o estado ativo dos botões ao digitar no CUSTOM
+  tipBtns.forEach((btn) => {
     btn.classList.remove('btnActive')
-  })*/
+  })
 
   // se o custom tip nao for igual a nada ativa a função de calcular a porcentagem costomizada
   if (tipCustom.value !== '') {
@@ -115,8 +114,13 @@ function setPeopleValue() {
 // essa função passa a condição que se o tanto de pessoas for maior que um tem as seguintes contas para ser feita
 function calculateTip() {
   if (peopleValue >= 1) {
-    let tipAmount = (billValue * tipValue) / peopleValue // exemplo 10 X 0.15(que seria 15%) / pela quantidade de pessoa
-    let total = (billValue * (tipValue + 1)) / peopleValue
+    let tipAmount = 0
+    let total = 0
+
+    if (!isNaN(billValue)) {
+      tipAmount = (billValue * tipValue) / peopleValue // exemplo 10 X 0.15(que seria 15%) / pela quantidade de pessoa
+      total = (billValue * (tipValue + 1)) / peopleValue
+    }
     results[0].innerHTML = '$' + tipAmount.toFixed(2) // passando o resultado para o primeiro valor e colocando somente 2 numero após a virgula
     results[1].innerHTML = '$' + total.toFixed(2) // passando o resultado para o segundo valor e colocando somente 2 numero após a virgula
   }
@@ -124,12 +128,12 @@ function calculateTip() {
 
 // função de reset tendo ela como um recomeço de um conta nova.
 function reset() {
-  bill.value = '0.0'
+  bill.value = ''
   setBillValue()
 
   tipBtns[2].click()
 
-  people.value = '1'
+  people.value = ''
   setPeopleValue()
 }
 

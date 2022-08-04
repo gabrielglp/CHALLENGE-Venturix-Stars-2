@@ -26,89 +26,93 @@
   </head>
   <body>
     <div class="container">
-      <div class="logo">
-        <img src="images/logo.svg" alt="logo" />
-      </div>
+      <header>
+        <div class="logo">
+          <img src="images/logo.svg" alt="logo" />
+        </div>
+      </header>
 
-      <div class="card">
-        <div class="input">
-          <div class="billContainer">
-            <div class="labelWrapper">
-              <label for="inpBill">Bill</label>
+      <main>
+        <div class="card">
+          <div class="input">
+            <div class="billContainer">
+              <div class="labelWrapper">
+                <label for="inpBill">Bill</label>
+              </div>
+
+              <div class="inpWrapper">
+                <input
+                  class="inpText"
+                  type="number"
+                  name="inpBill"
+                  id="inpBill"
+                  placeholder="0.0"
+                />
+                <img src="images/icon-dollar.svg" alt="dollar-icon" />
+              </div>
             </div>
 
-            <div class="inpWrapper">
-              <input
-                class="inpText"
-                type="number"
-                name="inpBill"
-                id="inpBill"
-                placeholder="0.0"
-              />
-              <img src="images/icon-dollar.svg" alt="dollar-icon" />
+            <div class="tipContainer">
+              <div class="labelWrapper">
+                <label for="inpTip">Select Tip %</label>
+              </div>
+              <div class="btnWrapper">
+                <div class="btn">5%</div>
+                <div class="btn">10%</div>
+                <div class="btn">15%</div>
+                <div class="btn">25%</div>
+                <div class="btn">50%</div>
+                <input
+                  class="inpText"
+                  type="text"
+                  name="inpTip"
+                  id="inpTip"
+                  placeholder="Custom"
+                />
+              </div>
+            </div>
+
+            <div class="peopleContainer">
+              <div class="labelWrapper">
+                <label for="inpPeople">Number of People</label>
+                <div class="errorMSG">Can't be zero</div>
+              </div>
+
+              <div class="inpWrapper">
+                <input
+                  class="inpText"
+                  type="text"
+                  name="inpPeople"
+                  id="inpPeople"
+                  placeholder="0"
+                />
+                <img src="images/icon-person.svg" alt="person-icon" />
+              </div>
             </div>
           </div>
 
-          <div class="tipContainer">
-            <div class="labelWrapper">
-              <label for="inpTip">Select Tip %</label>
-            </div>
-            <div class="btnWrapper">
-              <div class="btn">5%</div>
-              <div class="btn">10%</div>
-              <div class="btn">15%</div>
-              <div class="btn">25%</div>
-              <div class="btn">50%</div>
-              <input
-                class="inpText"
-                type="text"
-                name="inpTip"
-                id="inpTip"
-                placeholder="Custom"
-              />
-            </div>
-          </div>
+          <div class="output">
+            <div class="lineWrapper">
+              <div class="lineOutput">
+                <div class="titleWrapper">
+                  <div class="title">Tip Amount</div>
+                  <div class="desc">/ person</div>
+                </div>
+                <div class="value">$0.00</div>
+              </div>
 
-          <div class="peopleContainer">
-            <div class="labelWrapper">
-              <label for="inpPeople">Number of People</label>
-              <div class="errorMSG">Can't be zero</div>
+              <div class="lineOutput">
+                <div class="titleWrapper">
+                  <div class="title">Total</div>
+                  <div class="desc">/ person</div>
+                </div>
+                <div class="value">$0.00</div>
+              </div>
             </div>
-
-            <div class="inpWrapper">
-              <input
-                class="inpText"
-                type="text"
-                name="inpPeople"
-                id="inpPeople"
-                placeholder="0"
-              />
-              <img src="images/icon-person.svg" alt="person-icon" />
-            </div>
+            <div class="btnOutput reset">Reset</div>
           </div>
         </div>
-
-        <div class="output">
-          <div class="lineWrapper">
-            <div class="lineOutput">
-              <div class="titleWrapper">
-                <div class="title">Tip Amount</div>
-                <div class="desc">/ person</div>
-              </div>
-              <div class="value">$0.00</div>
-            </div>
-
-            <div class="lineOutput">
-              <div class="titleWrapper">
-                <div class="title">Total</div>
-                <div class="desc">/ person</div>
-              </div>
-              <div class="value">$0.00</div>
-            </div>
-          </div>
-          <div class="btnOutput reset">Reset</div>
-        </div>
-      </div>
+      </main>
     </div>
     <script src="assets/components/main.js"></script>
   </body>
